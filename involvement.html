@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Involvement - Mekides Portfolio</title>
+    <meta name="description" content="Student organizations, activities, and community involvement of Mekides">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            font-size: 16px;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 157, 0.03) 0%, transparent 50%);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Pink Blush Elements */
+        .blush {
+            position: fixed;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 107, 157, 0.1), rgba(255, 143, 171, 0.05));
+            pointer-events: none;
+            z-index: -1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .blush-1 {
+            width: 260px;
+            height: 260px;
+            top: 14%;
+            left: -130px;
+            animation-delay: 0s;
+        }
+
+        .blush-2 {
+            width: 170px;
+            height: 170px;
+            top: 68%;
+            right: -85px;
+            animation-delay: 2s;
+        }
+
+        .blush-3 {
+            width: 130px;
+            height: 130px;
+            top: 38%;
+            right: 24%;
+            animation-delay: 4s;
+        }
+
+        .blush-4 {
+            width: 210px;
+            height: 210px;
+            bottom: 16%;
+            left: 14%;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 107, 157, 0.1);
+        }
+
+        .nav-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: #666;
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            position: relative;
+            padding: 8px 16px;
+            border-radius: 25px;
+            background: transparent;
+            border: 2px solid transparent;
+        }
+
+        .nav-link::after {
+            display: none;
+        }
+
+        .nav-link:hover {
+            color: #333;
+            background: rgba(255, 107, 157, 0.1);
+            border-color: rgba(255, 107, 157, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            color: #333;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(255, 143, 171, 0.1));
+            border-color: rgba(255, 107, 157, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.2);
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 70px;
+            min-height: calc(100vh - 70px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff6b9d, transparent);
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 28%;
+            right: 11%;
+            width: 72px;
+            height: 72px;
+            background: radial-gradient(circle, rgba(255, 107, 157, 0.14), rgba(255, 143, 171, 0.04));
+            border-radius: 50%;
+            animation: pulse 5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            background: linear-gradient(135deg, #333, #ff6b9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Involvement Content */
+        .involvement-content {
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .involvement-content::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 157, 0.3), transparent);
+        }
+
+        .involvement-content::after {
+            content: '';
+            position: absolute;
+            top: 45%;
+            left: -38px;
+            width: 82px;
+            height: 82px;
+            background: radial-gradient(circle, rgba(255, 107, 157, 0.07), rgba(255, 143, 171, 0.03));
+            border-radius: 50%;
+            animation: float 7s ease-in-out infinite;
+        }
+
+        /* Enhanced spacing between sections */
+        .involvement-content + .involvement-content {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 107, 157, 0.1);
+        }
+
+        /* Image placeholder styling */
+        .image-placeholder {
+            margin-top: 25px;
+            padding: 25px;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.03), rgba(255, 143, 171, 0.03));
+            border: 2px dashed rgba(255, 107, 157, 0.4);
+            border-radius: 12px;
+            text-align: center;
+            color: #666;
+            transition: all 0.3s ease;
+        }
+
+        .image-placeholder:hover {
+            border-color: rgba(255, 107, 157, 0.6);
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.05), rgba(255, 143, 171, 0.05));
+            transform: translateY(-2px);
+        }
+
+        .image-placeholder p {
+            margin: 0;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Enhanced bullet points for better readability */
+        .involvement-bullets li strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* Enhanced styling for "Why This Matters?" sections */
+        .involvement-item h5 {
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.08), rgba(255, 143, 171, 0.08));
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 25px 0 15px 0;
+            border-left: 4px solid #ff6b9d;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+
+        .involvement-item {
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+
+        .involvement-item:hover {
+            border-bottom-color: transparent;
+        }
+
+        .involvement-item:last-child {
+            border-bottom: none;
+        }
+
+        .involvement-item::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -28px;
+            width: 68px;
+            height: 68px;
+            background: radial-gradient(circle, rgba(255, 107, 157, 0.09), rgba(255, 143, 171, 0.03));
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        .involvement-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .involvement-role {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .involvement-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .involvement-bullets {
+            list-style: none;
+        }
+
+        .involvement-bullets li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .involvement-bullets li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #ff6b9d;
+            font-weight: 900;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .involvement-bullets li:hover {
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blush {
+                display: none;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header h2 {
+                font-size: 1.3rem;
+            }
+
+            .involvement-title {
+                font-size: 1.3rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Pink Blush Elements -->
+    <div class="blush blush-1"></div>
+    <div class="blush blush-2"></div>
+    <div class="blush blush-3"></div>
+    <div class="blush blush-4"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Mekides</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="mywork.html" class="nav-link">Work</a></li>
+                <li><a href="involvement.html" class="nav-link active">Involvement</a></li>
+                <li><a href="honors.html" class="nav-link">Honors</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section">
+            <div class="container">
+                <!-- Header -->
+                <div class="header">
+                    <h1>My Involvement</h1>
+                </div>
+
+                <!-- Involvement Content -->
+                <div class="involvement-content">
+                    <h3 class="section-title">Leadership</h3>
+                    
+                    <div class="involvement-item">
+                        <h4 class="involvement-title">NSBE - National Society of Black Engineers</h4>
+                        <p class="involvement-role">Freshman Representative</p>
+                        <p class="involvement-description">Oct 2023 – Apr 2024</p>
+                        <ul class="involvement-bullets">
+                            <li>Served as the voice of first-year students on the NSBE board, ensuring their perspectives were considered in programming and initiatives.</li>
+                            <li>Promoted chapter events through peer outreach and targeted communications, increasing first-year engagement.</li>
+                            <li>Planned and executed at two events specifically for first-year members to foster community integration.</li>
+                        </ul>
+                        
+                        <p class="involvement-role">Corporate Relations Chair (Elected Twice)</p>
+                        <p class="involvement-description">Apr 2024 – Present</p>
+                        <ul class="involvement-bullets">
+                            <li>Raised $8,000 through sponsorships from corporate partners and a GoFundMe campaign, funding chapter initiatives and events.</li>
+                            <li>Secured 6 new industry partnerships and organized on-campus networking events with companies including Bloomberg, Google, McKinsey, PDT, Accenture, and Mastercard.</li>
+                            <li>Expanded and maintained NSBE's corporate contact database, strengthening long-term industry relationships.</li>
+                            <li>Led the ECAD Solicitation Drive and coordinated professional development workshops, connecting members with internship and job opportunities.</li>
+                            <li>Recognized for leadership and measurable results, re-elected for a second term.</li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="involvement-item">
+                        <h4 class="involvement-title">BUEC - Black Undergraduate Entrepreneurs Collective</h4>
+                        <p class="involvement-role">Director of Programming</p>
+                        <p class="involvement-description">Aug 2024 - Present</p>
+                        <ul class="involvement-bullets">
+                            <li>Planned and led all BUEC events, including workshops, networking nights, and speaker panels.</li>
+                            <li>Worked with guest speakers and trainers to deliver engaging, high-value experiences for members.</li>
+                            <li>Partnered with other student groups and Black professional networks to co-host events and grow our reach.</li>
+                            <li>Managed event budgets and resources to make sure programs were impactful and cost-effective.</li>
+                        </ul>
+                        
+                    </div>
+
+                    <div class="involvement-item">
+                        <h4 class="involvement-title">PEESA - Penn Ethiopian and Eritrean Students Association</h4>
+                        <p class="involvement-role">Freshman Representative</p>
+                        <p class="involvement-description">Sep 2023 – Dec 2023</p>
+                        <ul class="involvement-bullets">
+                            <li>Represented the interests and perspectives of first-year students in executive board meetings, ensuring inclusive decision-making.</li>
+                            <li>Gathered and relayed feedback from first-year members to improve event outreach, marketing, and programming.</li>
+                            <li>Promoted events and initiatives to first-year students, increasing engagement in cultural and social activities.</li>
+                        </ul>
+                        
+                        <p class="involvement-role">Marketing Chair</p>
+                        <p class="involvement-description">Jan 2024 – May 2025</p>
+                        <ul class="involvement-bullets">
+                            <li>Led the marketing strategy for all PEESA events, overseeing content creation and distribution across multiple social media platforms.</li>
+                            <li>Collaborated with the Social Chair and Secretary to design cohesive promotional campaigns, boosting event attendance and awareness.</li>
+                            <li>Managed brand presence for PEESA, ensuring consistent messaging and visual identity across online and offline channels.</li>
+                        </ul>
+                        
+                    </div>
+
+                    <!-- Leadership Images Gallery -->
+                    <div class="leadership-gallery" style="margin: 40px 0; text-align: center;">
+                        <h4 style="margin-bottom: 30px; color: #333; font-size: 1.4em; font-weight: 600;">Leadership in Action</h4>
+                        <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; align-items: center;">
+                            <div class="gallery-item" style="flex: 0 0 auto;">
+                                <img src="images/involvement/NSBE.jpeg" alt="NSBE activities and events" 
+                                     style="width: 200px; height: 150px; object-fit: cover; border-radius: 12px; 
+                                            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.2); 
+                                            cursor: pointer; transition: all 0.3s ease;"
+                                     onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(255, 107, 157, 0.3)'"
+                                     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.2)'"
+                                     onclick="openImageModal(this.src, this.alt)">
+                                <p style="margin-top: 10px; font-size: 0.9em; color: #666; font-weight: 500;">NSBE - National Society of Black Engineers</p>
+                            </div>
+                            <div class="gallery-item" style="flex: 0 0 auto;">
+                                <img src="images/involvement/BUEC.jpeg" alt="BUEC activities and events" 
+                                     style="width: 200px; height: 150px; object-fit: cover; border-radius: 12px; 
+                                            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.2); 
+                                            cursor: pointer; transition: all 0.3s ease;"
+                                     onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(255, 107, 157, 0.3)'"
+                                     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.2)'"
+                                     onclick="openImageModal(this.src, this.alt)">
+                                <p style="margin-top: 10px; font-size: 0.9em; color: #666; font-weight: 500;">BUEC - Black Undergraduate Entrepreneurs Collective</p>
+                            </div>
+                            <div class="gallery-item" style="flex: 0 0 auto;">
+                                <img src="images/involvement/PEESA.JPG" alt="PEESA activities and events" 
+                                     style="width: 200px; height: 150px; object-fit: cover; border-radius: 12px; 
+                                            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.2); 
+                                            cursor: pointer; transition: all 0.3s ease;"
+                                     onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 25px rgba(255, 107, 157, 0.3)'"
+                                     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.2)'"
+                                     onclick="openImageModal(this.src, this.alt)">
+                                <p style="margin-top: 10px; font-size: 0.9em; color: #666; font-weight: 500;">PEESA - Penn Ethiopian and Eritrean Students Association</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="involvement-item">
+                        <h4 class="involvement-title">Why These Club Involvements Matter</h4>
+                        <p class="involvement-description">These leadership roles have been instrumental in developing my skills in:</p>
+                        <ul class="involvement-bullets">
+                            <li><strong>Strategic Planning:</strong> Organizing events, managing budgets, and coordinating with multiple stakeholders</li>
+                            <li><strong>Communication:</strong> Representing diverse student voices and building relationships with corporate partners</li>
+                            <li><strong>Leadership:</strong> Managing teams, delegating responsibilities, and driving initiatives to completion</li>
+                            <li><strong>Networking:</strong> Building professional relationships and expanding organizational reach</li>
+                            <li><strong>Cultural Competency:</strong> Promoting diversity and inclusion through student organizations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Organizations Section -->
+                <div class="involvement-content">
+                    <h3 class="section-title">Organizations</h3>
+                    
+                    <div class="involvement-item">
+                        <h4 class="involvement-title">Professional & Academic Organizations</h4>
+                        <ul class="involvement-bullets">
+                            <li><strong>NSBE - Collegiate:</strong> Active member of the National Society of Black Engineers collegiate chapter</li>
+                            <li><strong>ColorStack - Student Fellow:</strong> Fellow in the ColorStack program supporting Black and Latinx computer science students</li>
+                            <li><strong>Ignite AI4All - ML Student:</strong> Machine learning student in the Ignite AI4All program</li>
+                            <li><strong>ADPList - Campus Ambassador:</strong> Campus ambassador for ADPList, connecting students with mentors</li>
+                            <li><strong>Rewriting the Code (RTC) - Student Fellow:</strong> Fellow in the Rewriting the Code program for women in tech</li>
+                            <li><strong>Women in Computer Science (WiCS) - Chapter Member:</strong> Active member of the Women in Computer Science chapter</li>
+                            <li><strong>Society of Women Engineers (SWE) - Chapter Member:</strong> Member of the Society of Women Engineers chapter</li>
+                            <li><strong>Black Girls Code (BGC) - Student Fellow:</strong> Fellow in the Black Girls Code program</li>
+                        </ul>
+                        
+                        <h5>Why This Matters?</h5>
+                        <p class="involvement-description">These organizations provide:</p>
+                        <ul class="involvement-bullets">
+                            <li>Access to professional networks and mentorship opportunities</li>
+                            <li>Professional development and skill-building resources</li>
+                            <li>Community support and representation in tech and engineering fields</li>
+                            <li>Leadership development and career advancement opportunities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Conference Attended Section -->
+                <div class="involvement-content">
+                    <h3 class="section-title">Conference Attended</h3>
+                    
+                    <div class="involvement-item">
+                        <h4 class="involvement-title">NSBE Conferences</h4>
+                        <ul class="involvement-bullets">
+                            <li><strong>NSBE Regional Conference 2023:</strong> Attended regional conference for networking and professional development</li>
+                            <li><strong>NSBE National Conference 2024:</strong> Participated in the national conference with industry leaders</li>
+                            <li><strong>NSBE National Conference 2025:</strong> Latest national conference attendance for continued growth</li>
+                        </ul>
+                        
+                        <h4 class="involvement-title">ColorStack Conferences</h4>
+                        <ul class="involvement-bullets">
+                            <li><strong>ColorStack IRL StackedUp Summit 2024:</strong> In-person summit focused on Black and Latinx tech professionals</li>
+                            <li><strong>ColorStack IRL StackedUp Summit 2025:</strong> Latest summit attendance for continued learning and networking</li>
+                        </ul>
+                        
+                        <h4 class="involvement-title">RenderATL</h4>
+                        <ul class="involvement-bullets">
+                            <li><strong>RenderATL Conference 2025:</strong> Attended the RenderATL conference for web development and design</li>
+                        </ul>
+                        
+                        <h5>Why This Matters?</h5>
+                        <p class="involvement-description">I have received full scholarships to attend all of these conferences. These opportunities have been invaluable for:</p>
+                        <ul class="involvement-bullets">
+                            <li>Building professional networks with industry leaders and peers</li>
+                            <li>Gaining insights into current industry trends and technologies</li>
+                            <li>Accessing exclusive career opportunities and internships</li>
+                            <li>Developing leadership skills through conference participation</li>
+                            <li>Representing diversity in tech and engineering spaces</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" style="display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); backdrop-filter: blur(5px);">
+        <div style="position: relative; margin: 2% auto; max-width: 95%; max-height: 95%; text-align: center; display: flex; align-items: center; justify-content: center; min-height: 100vh;">
+            <span id="closeModal" style="position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; z-index: 2001; background: rgba(0, 0, 0, 0.5); border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; line-height: 1;">&times;</span>
+            <img id="modalImage" style="max-width: 95vw; max-height: 95vh; width: auto; height: auto; border-radius: 12px; box-shadow: 0 15px 50px rgba(0, 0, 0, 0.7); object-fit: contain;">
+        </div>
+    </div>
+
+    <script>
+        function openImageModal(src, alt) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modal.style.display = 'block';
+            modalImg.src = src;
+            modalImg.alt = alt;
+        }
+
+        function closeImageModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside the image
+        document.getElementById('imageModal').onclick = function(event) {
+            if (event.target === this) {
+                closeImageModal();
+            }
+        }
+
+        // Close modal with escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+
+        // Close button functionality
+        document.getElementById('closeModal').onclick = closeImageModal;
+    </script>
+</body>
+</html>

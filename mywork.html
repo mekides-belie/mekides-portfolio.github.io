@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Experience - Mekides Portfolio</title>
+    <meta name="description" content="Professional work experience and research projects of Mekides">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            font-size: 16px;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(255, 107, 157, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 107, 157, 0.03) 0%, transparent 50%);
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Pink Blush Elements */
+        .blush {
+            position: fixed;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 107, 157, 0.1), rgba(255, 143, 171, 0.05));
+            pointer-events: none;
+            z-index: -1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .blush-1 {
+            width: 280px;
+            height: 280px;
+            top: 12%;
+            left: -140px;
+            animation-delay: 0s;
+        }
+
+        .blush-2 {
+            width: 190px;
+            height: 190px;
+            top: 65%;
+            right: -95px;
+            animation-delay: 2s;
+        }
+
+        .blush-3 {
+            width: 140px;
+            height: 140px;
+            top: 35%;
+            right: 22%;
+            animation-delay: 4s;
+        }
+
+        .blush-4 {
+            width: 220px;
+            height: 220px;
+            bottom: 18%;
+            left: 12%;
+            animation-delay: 1s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 107, 157, 0.1);
+        }
+
+        .nav-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            background: linear-gradient(135deg, #ff6b9d, #ff8fab);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: #666;
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            position: relative;
+            padding: 8px 16px;
+            border-radius: 25px;
+            background: transparent;
+            border: 2px solid transparent;
+        }
+
+        .nav-link::after {
+            display: none;
+        }
+
+        .nav-link:hover {
+            color: #333;
+            background: rgba(255, 107, 157, 0.1);
+            border-color: rgba(255, 107, 157, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .nav-link.active {
+            color: #333;
+            background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(255, 143, 171, 0.1));
+            border-color: rgba(255, 107, 157, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 107, 157, 0.2);
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 70px;
+            min-height: calc(100vh - 70px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff6b9d, transparent);
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 25%;
+            right: 12%;
+            width: 75px;
+            height: 75px;
+            background: radial-gradient(circle, rgba(255, 107, 157, 0.13), rgba(255, 143, 171, 0.04));
+            border-radius: 50%;
+            animation: pulse 5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            background: linear-gradient(135deg, #333, #ff6b9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Work Section */
+        .work-section {
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        .work-section::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 157, 0.3), transparent);
+        }
+
+        .work-section::after {
+            content: '';
+            position: absolute;
+            top: 40%;
+            left: -35px;
+            width: 85px;
+            height: 85px;
+            background: radial-gradient(circle, rgba(255, 107, 157, 0.09), rgba(255, 143, 171, 0.03));
+            border-radius: 50%;
+            animation: float 7s ease-in-out infinite;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+        }
+
+
+        .experience-item {
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+
+        .experience-item:hover {
+            border-bottom-color: transparent;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-item::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -25px;
+            width: 65px;
+            height: 65px;
+            background: radial-gradient(circle, rgba(255, 107, 157, 0.08), rgba(255, 143, 171, 0.03));
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            animation-delay: 1s;
+        }
+
+        .job-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .job-company {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .job-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .job-bullets {
+            list-style: none;
+        }
+
+        .job-bullets li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .job-bullets li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #ff6b9d;
+            font-weight: bold;
+        }
+
+        .job-bullets li:hover {
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blush {
+                display: none;
+            }
+
+            .header h1 {
+                font-size: 2.5rem;
+            }
+
+            .header h2 {
+                font-size: 1.3rem;
+            }
+
+            .job-title {
+                font-size: 1.3rem;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Pink Blush Elements -->
+    <div class="blush blush-1"></div>
+    <div class="blush blush-2"></div>
+    <div class="blush blush-3"></div>
+    <div class="blush blush-4"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Mekides</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                  <li><a href="mywork.html" class="nav-link active">Projects</a></li>
+                <li><a href="involvement.html" class="nav-link">Involvement</a></li>
+                <li><a href="honors.html" class="nav-link">Honors</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="section">
+            <div class="container">
+                <!-- Header -->
+                <div class="header">
+                    <h1>Projects & Experience</h1>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="work-section" style="margin-bottom: 60px;">
+                    <h3 class="section-title" style="font-size: 1.4rem; margin-bottom: 50px; text-align: center; background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(255, 143, 171, 0.05)); padding: 20px; border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.2);">Research Projects</h3>
+                    
+                    <div id="rag-project" class="experience-item" style="background: rgba(255, 107, 157, 0.02); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.1); margin-bottom: 30px;">
+                        <h4 class="job-title" style="color: #ff6b9d; font-size: 1.3rem;">Research Assistant</h4>
+                        <p class="job-company" style="font-weight: 600; color: #333; margin-bottom: 15px;">Chris Callison Burch Lab UPenn (Multimodal AI Lab)</p>
+                        
+                        <div style="margin-top: 30px; background: rgba(255, 255, 255, 0.5); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 107, 157, 0.15);">
+                            <h4 style="color: #333; font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; text-align: center; background: linear-gradient(135deg, #ff6b9d, #c44569); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Project Details</h4>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Overview</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Developed a multimodal Retrieval-Augmented Generation (RAG) pipeline for scientific question answering leveraging text and image data from the Semantic Scholar API.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Problem</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Researchers needed an efficient way to search and retrieve relevant scientific information from both text and visual content in academic papers, with high precision and reduced hallucinations.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Solution</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Built a multimodal RAG system that processes PDFs into Markdown, encodes text-figure pairs with CLIP embeddings, and uses Weaviate with FlagEmbedding reranking for precise cross-modal retrieval.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Built With</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Python</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">CLIP</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Weaviate</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">FlagEmbedding</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">PyTorch</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Semantic Scholar API</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 0; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Lessons Learned</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Multimodal AI requires careful alignment between text and visual embeddings. Reranking significantly improves retrieval precision and reduces LLM hallucinations in scientific contexts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item" style="background: rgba(255, 107, 157, 0.02); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.1); margin-bottom: 30px;">
+                        <h4 class="job-title" style="color: #ff6b9d; font-size: 1.3rem;">Research Assistant</h4>
+                        <p class="job-company" style="font-weight: 600; color: #333; margin-bottom: 15px;">MOLMO Research Project</p>
+                        
+                        <div style="margin-top: 30px; background: rgba(255, 255, 255, 0.5); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 107, 157, 0.15);">
+                            <h4 style="color: #333; font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; text-align: center; background: linear-gradient(135deg, #ff6b9d, #c44569); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Project Details</h4>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Overview</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Conducted research on MOLMO (Multilingual Object Language Model) focusing on improving AI model performance for Amharic and Chinese languages through dense captioning methods.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Problem</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Low-resource languages like Amharic and Chinese face significant challenges in AI model performance due to limited training data and lack of cultural/linguistic context in existing models.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Solution</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Supported dense captioning methods and contributed cultural and linguistic insights to enhance model performance, developing innovative approaches to multilingual AI challenges.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Built With</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">MOLMO Framework</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Dense Captioning</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Multilingual AI</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Amharic Processing</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Chinese Processing</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 0; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Lessons Learned</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Cultural and linguistic context is crucial for improving AI model performance on low-resource languages. Dense captioning methods can significantly enhance contextual accuracy in multilingual models.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="unselfie-project" class="experience-item" style="background: rgba(255, 107, 157, 0.02); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.1); margin-bottom: 30px;">
+                        <h4 class="job-title" style="color: #ff6b9d; font-size: 1.3rem;">Summer Research Intern</h4>
+                        <p class="job-company" style="font-weight: 600; color: #333; margin-bottom: 15px;">UPenn General Robotics, Automation, Sensing and Perception Lab</p>
+                        
+                        <div style="margin-top: 30px; background: rgba(255, 255, 255, 0.5); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 107, 157, 0.15);">
+                            <h4 style="color: #333; font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; text-align: center; background: linear-gradient(135deg, #ff6b9d, #c44569); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Project Details</h4>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Overview</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Developed innovative ML pipelines and contributed to educational initiatives in AI and machine learning, focusing on selfie-to-portrait conversion and educational outreach.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Problem</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Selfie images often lack professional portrait quality and varied body poses, limiting their use in professional contexts. Additionally, there was a need for accessible AI/ML education for high school students.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Solution</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Built a comprehensive pipeline using ML and image processing techniques to convert selfies into realistic portraits with varied body poses, and created educational tutorials for AI/ML learning.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Built With</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Python</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">PyTorch</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Image Processing</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Computer Vision</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Machine Learning</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Educational Content</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 0; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Lessons Learned</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Image segmentation and pose estimation require careful tuning for realistic results. Educational outreach in AI/ML can significantly impact students' career trajectories and interest in technology.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+
+                <!-- Personal Projects -->
+                <div id="personal-projects" class="work-section" style="margin-bottom: 60px;">
+                    <h3 class="section-title" style="font-size: 1.4rem; margin-bottom: 50px; text-align: center; background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(255, 143, 171, 0.05)); padding: 20px; border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.2);">Personal Projects</h3>
+                    
+                    <div class="experience-item" style="background: rgba(255, 107, 157, 0.02); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.1); margin-bottom: 30px;">
+                        <h4 class="job-title" style="color: #ff6b9d; font-size: 1.3rem;">AI4All Summer Program Participant</h4>
+                        <p class="job-company" style="font-weight: 600; color: #333; margin-bottom: 15px;">Remote Program</p>
+                        
+                        <div style="margin-top: 30px; background: rgba(255, 255, 255, 0.5); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 107, 157, 0.15);">
+                            <h4 style="color: #333; font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; text-align: center; background: linear-gradient(135deg, #ff6b9d, #c44569); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Project Details</h4>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Overview</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Participating in a 20-week AI accelerator focused on ML, data ethics, and responsible AI practices, collaborating on a Deep Fake detection project.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Problem</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Deep fake technology poses significant risks to information integrity and trust, with synthetic content becoming increasingly sophisticated and difficult to detect.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Solution</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Developing a Deep Fake detector using advanced machine learning techniques to flag altered or synthetic content, with focus on ethical AI development and model performance evaluation.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Built With</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Machine Learning</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Deep Learning</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Computer Vision</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Data Ethics</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Responsible AI</span>
+                                    </div>
+                                </div>
+                    </div>
+
+                            <div class="expandable-section" style="margin-bottom: 0; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Lessons Learned</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Ethical considerations are paramount in AI development. Model performance evaluation and detection accuracy are crucial for building trustworthy AI systems that can combat misinformation.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item" style="background: rgba(255, 107, 157, 0.02); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.1); margin-bottom: 30px;">
+                        <h4 class="job-title" style="color: #ff6b9d; font-size: 1.3rem;">Budgeting App</h4>
+                        <p class="job-company" style="font-weight: 600; color: #333; margin-bottom: 15px;">Personal Project</p>
+
+                        <div style="margin-top: 30px; background: rgba(255, 255, 255, 0.5); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 107, 157, 0.15);">
+                            <h4 style="color: #333; font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; text-align: center; background: linear-gradient(135deg, #ff6b9d, #c44569); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Project Details</h4>
+
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Overview</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Built a budgeting app with a FastAPI backend and a React frontend. It lets users log transactions, see income vs. expenses, and track trends with clear charts. By default, it runs locally, but it can link to banks with Plaid keys.</p>
+                                </div>
+                            </div>
+
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Problem</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Many people rely on scattered notes or spreadsheets to track spending, which makes it hard to see where their money goes.</p>
+                                </div>
+                            </div>
+
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Solution</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Created a clean workflow to add and edit transactions, store them securely, and generate simple summaries and visuals. The API supports filters, categories, trends, and top merchants. Bank syncing is ready through Plaid, but turned off unless credentials are added.</p>
+                                </div>
+                            </div>
+
+                            <div class="expandable-section" style="margin-bottom: 0; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Built With</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Python</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">FastAPI</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">SQLAlchemy</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">SQLite</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">PostgreSQL (optional)</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">JWT Auth</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">TypeScript</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">React</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Tailwind CSS</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Recharts</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item" style="background: rgba(255, 107, 157, 0.02); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.1); margin-bottom: 30px;">
+                        <h4 class="job-title" style="color: #ff6b9d; font-size: 1.3rem;">BiteMap</h4>
+                        <p class="job-company" style="font-weight: 600; color: #333; margin-bottom: 15px;">Personal Project</p>
+                        
+                        <div style="margin-top: 30px; background: rgba(255, 255, 255, 0.5); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 107, 157, 0.15);">
+                            <h4 style="color: #333; font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; text-align: center; background: linear-gradient(135deg, #ff6b9d, #c44569); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Project Details</h4>
+
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Overview</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Built BiteMap, a map-first cheesesteak finder for web and mobile. It loads hundreds of nearby cheesesteak spots from Google Places, with filters, favorites, personal ratings, photos, and Google Maps directions. Every spot is marked with a cheese icon for quick scanning.</p>
+                                </div>
+                            </div>
+
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Problem</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Students in Philly like myself needed a fast way to see all cheesesteak options in one place, without switching between multiple apps or doing inconsistent searches.</p>
+                                </div>
+                            </div>
+
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Solution</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Created a server that queries Google Places with large-radius, multi-keyword searches, handles pagination, and removes duplicates. The app sorts results by distance and rating, and supports filters, favorites, user ratings, photos, and one-tap directions. Each location is clearly tagged with a 🧀.</p>
+                                </div>
+                            </div>
+
+                            <div class="expandable-section" style="margin-bottom: 0; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Built With</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">HTML</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">CSS</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">JavaScript</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">React Native</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Node.js</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Express</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Google Places API</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item" style="background: rgba(255, 107, 157, 0.02); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 107, 157, 0.1); margin-bottom: 30px;">
+                        <h4 class="job-title" style="color: #ff6b9d; font-size: 1.3rem;">UniVo</h4>
+                        <p class="job-company" style="font-weight: 600; color: #333; margin-bottom: 15px;">Personal Project</p>
+
+                        <div style="margin-top: 30px; background: rgba(255, 255, 255, 0.5); border-radius: 15px; padding: 25px; border: 1px solid rgba(255, 107, 157, 0.15);">
+                            <h4 style="color: #333; font-size: 1.2rem; font-weight: 600; margin-bottom: 20px; text-align: center; background: linear-gradient(135deg, #ff6b9d, #c44569); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Project Details</h4>
+
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Overview</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">A mobile app to help people find and discuss local volunteering opportunities. Users swipe through a feed of roles, open a discussion and organizers can post new opportunities.</p>
+                                </div>
+                            </div>
+
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Problem</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Volunteer opportunities are scattered across many sources, making it hard for people to quickly find relevant roles. Organizers also need an easy way to share opportunities without heavy tools.</p>
+                                </div>
+                            </div>
+
+                            <div class="expandable-section" style="margin-bottom: 20px; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>The Solution</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <p style="margin: 0; font-size: 1rem;">Designed a swipe feed to scan and like/skip opportunities, with per-opportunity discussions to keep chats focused. Added a lightweight posting form with input checks to keep data clean. The prototype runs fully on-device with mock data, making it fast and easy to demo.</p>
+                                </div>
+                            </div>
+
+                            <div class="expandable-section" style="margin-bottom: 0; background: rgba(255, 107, 157, 0.03); border-radius: 10px; border: 1px solid rgba(255, 107, 157, 0.1); overflow: hidden; transition: all 0.3s ease;" onmouseover="this.style.borderColor='rgba(255, 107, 157, 0.3)'; this.style.boxShadow='0 4px 15px rgba(255, 107, 157, 0.1)'" onmouseout="this.style.borderColor='rgba(255, 107, 157, 0.1)'; this.style.boxShadow='none'">
+                                <h5 class="expandable-header" style="color: #333; font-size: 1.1rem; font-weight: 600; margin: 0; padding: 15px 20px; cursor: pointer; transition: all 0.3s ease; background: rgba(255, 107, 157, 0.05); display: flex; justify-content: space-between; align-items: center;" onclick="toggleSection(this)" onmouseover="this.style.background='rgba(255, 107, 157, 0.1)'; this.style.color='#ff6b9d'" onmouseout="this.style.background='rgba(255, 107, 157, 0.05)'; this.style.color='#333'">
+                                    <span>Built With</span>
+                                    <span style="font-size: 1rem; transition: transform 0.3s ease;">▼</span>
+                                </h5>
+                                <div class="expandable-content" style="display: none; padding: 20px; color: #666; line-height: 1.7; background: rgba(255, 255, 255, 0.8);">
+                                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">React Native</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">TypeScript</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Zustand</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Zod</span>
+                                        <span style="background: linear-gradient(135deg, #ff6b9d, #c44569); color: white; padding: 6px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">react-native-deck-swiper</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleSection(header) {
+            const content = header.nextElementSibling;
+            const arrow = header.querySelector('span:last-child');
+            
+            if (content.style.display === 'none' || content.style.display === '') {
+                content.style.display = 'block';
+                content.style.opacity = '0';
+                content.style.transform = 'translateY(-10px)';
+                
+                // Smooth animation
+                setTimeout(() => {
+                    content.style.transition = 'all 0.3s ease';
+                    content.style.opacity = '1';
+                    content.style.transform = 'translateY(0)';
+                }, 10);
+                
+                arrow.style.transform = 'rotate(180deg)';
+                arrow.textContent = '▲';
+            } else {
+                content.style.transition = 'all 0.3s ease';
+                content.style.opacity = '0';
+                content.style.transform = 'translateY(-10px)';
+                
+                setTimeout(() => {
+                    content.style.display = 'none';
+                }, 300);
+                
+                arrow.style.transform = 'rotate(0deg)';
+                arrow.textContent = '▼';
+            }
+        }
+    </script>
+</body>
+</html>
